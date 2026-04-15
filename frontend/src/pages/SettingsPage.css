@@ -1,0 +1,272 @@
+/* Settings Page */
+.settings-page {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.settings-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.settings-left,
+.settings-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.settings-card {
+    padding: 1.5rem;
+}
+
+.settings-card h3 {
+    margin-bottom: .5rem;
+}
+
+/* Form */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.form-full {
+    grid-column: 1 / -1;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+}
+
+.form-label {
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.form-actions {
+    display: flex;
+    gap: .75rem;
+}
+
+.toggle-field {
+    padding: .75rem;
+    background: var(--glass);
+    border-radius: 10px;
+}
+
+.toggle-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.toggle-label p {
+    font-size: .8rem;
+    color: var(--text-muted);
+    margin-top: .1rem;
+}
+
+/* Toggle switch */
+.toggle {
+    width: 44px;
+    height: 24px;
+    background: var(--glass);
+    border: 1px solid var(--border-dim);
+    border-radius: 999px;
+    position: relative;
+    transition: all .25s;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.toggle::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    background: var(--text-muted);
+    border-radius: 50%;
+    transition: all .25s;
+}
+
+.toggle.on {
+    background: var(--blue);
+    border-color: var(--blue);
+}
+
+.toggle.on::after {
+    left: calc(100% - 20px);
+    background: white;
+}
+
+/* Contacts list */
+.contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: .75rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.contact-left {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    flex: 1;
+}
+
+.contact-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: .15rem;
+}
+
+.contact-info strong {
+    font-size: .9rem;
+    color: var(--text);
+}
+
+.contact-info span {
+    font-size: .8rem;
+    color: var(--text-muted);
+}
+
+.contact-badges {
+    display: flex;
+    gap: .3rem;
+    flex-wrap: wrap;
+    margin-top: .2rem;
+}
+
+.contact-actions {
+    display: flex;
+    gap: .4rem;
+}
+
+/* Status list */
+.status-list {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    margin-top: .75rem;
+}
+
+.status-row {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: .6rem;
+    background: var(--glass);
+    border-radius: 8px;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.status-dot.ok {
+    background: var(--green);
+    box-shadow: 0 0 8px rgba(16, 185, 129, .4);
+}
+
+.status-dot.warn {
+    background: var(--red);
+    box-shadow: 0 0 8px rgba(239, 68, 68, .4);
+}
+
+.status-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.status-info strong {
+    font-size: .88rem;
+    color: var(--text);
+}
+
+.status-info span {
+    font-size: .76rem;
+    color: var(--text-muted);
+}
+
+/* Quick phrases */
+.quick-phrases {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+    margin-top: .75rem;
+}
+
+/* About card */
+.about-card {
+    text-align: center;
+}
+
+.about-logo {
+    font-size: 3rem;
+    margin-bottom: .5rem;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.tech-pill {
+    padding: .2rem .75rem;
+    border-radius: 999px;
+    font-size: .75rem;
+    font-weight: 600;
+    background: var(--blue-dim);
+    color: var(--blue);
+    border: 1px solid rgba(79, 142, 247, .2);
+}
+
+@media (max-width: 900px) {
+    .settings-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}

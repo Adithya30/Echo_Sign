@@ -1,0 +1,132 @@
+/* Emergency styles */
+.emergency-page {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.em-section {
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.em-section h2 {
+    font-size: 1.3rem;
+}
+
+.em-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.active-alert-banner {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.alert-banner-icon {
+    font-size: 2.5rem;
+}
+
+.alert-banner-text strong {
+    display: block;
+    font-size: 1.1rem;
+}
+
+.alert-banner-text p {
+    margin-top: 0.2rem;
+    font-size: 0.9rem;
+}
+
+.emergency-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.emergency-word-card {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.ew-emoji {
+    font-size: 2.5rem;
+}
+
+.ew-word {
+    font-size: 1.1rem;
+    font-weight: 800;
+    font-family: 'Space Grotesk';
+    color: var(--red);
+}
+
+.ew-desc {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+.alert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.alert-item {
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+
+.alert-item-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.alert-type-badge {
+    display: flex;
+    gap: .5rem;
+}
+
+.alert-message {
+    color: var(--text);
+    font-size: .9rem;
+}
+
+.alert-meta {
+    display: flex;
+    gap: 1.5rem;
+    font-size: .8rem;
+    color: var(--text-muted);
+}
+
+.protocol-grid {
+    margin-top: .5rem;
+}
+
+.protocol-step {
+    padding: 1.2rem;
+}
+
+@media(max-width:700px) {
+    .emergency-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .alert-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

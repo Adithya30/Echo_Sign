@@ -1,0 +1,316 @@
+/* TranslatorPage Styles */
+.translator-page {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.translator-layout {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+/* Camera Panel */
+.camera-panel {
+    padding: 1.2rem;
+}
+
+.camera-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.camera-title {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.camera-view {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #0a0d1a;
+    aspect-ratio: 4/3;
+}
+
+.webcam-feed {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scaleX(-1);
+}
+
+.landmark-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.camera-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 13, 26, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+}
+
+.overlay-content {
+    text-align: center;
+    color: var(--text-muted);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.recording-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 999px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.recording-badge.emergency {
+    color: #ff0000;
+    border-color: rgba(255, 0, 0, 0.5);
+    animation: blink-border 0.8s ease-in-out infinite;
+}
+
+.hand-status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.75rem;
+    padding: 0.6rem 0.8rem;
+    background: var(--glass);
+    border-radius: 8px;
+}
+
+.hand-indicator {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.hand-indicator.detected {
+    color: var(--green);
+}
+
+.hand-indicator.none {
+    color: var(--text-muted);
+}
+
+.hint-text {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+/* Sidebar */
+.translator-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.result-card {
+    padding: 1.5rem;
+}
+
+.result-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.result-word {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--blue), var(--cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+}
+
+.confidence-section {
+    margin-bottom: 1.2rem;
+}
+
+.confidence-label {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin-bottom: 0.4rem;
+}
+
+.result-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.sentence-card,
+.recent-card {
+    padding: 1.2rem;
+}
+
+.section-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-dim);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.sentence-display {
+    min-height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+    background: var(--glass);
+    border-radius: 8px;
+    padding: 0.6rem;
+}
+
+.word-chip {
+    background: var(--blue-dim);
+    color: var(--blue);
+    border: 1px solid rgba(79, 142, 247, 0.25);
+    border-radius: 6px;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.empty-text {
+    color: var(--text-muted);
+    font-size: 0.83rem;
+}
+
+.recent-words {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.word-btn {
+    background: var(--glass);
+    border: 1px solid var(--border-dim);
+    color: var(--text-dim);
+    padding: 0.35rem 0.7rem;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.word-btn:hover {
+    background: var(--blue-dim);
+    color: var(--blue);
+    border-color: rgba(79, 142, 247, 0.3);
+}
+
+/* Emergency Banner */
+.emergency-banner {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(239, 68, 68, 0.15);
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 700px;
+    backdrop-filter: blur(20px);
+    animation: blink-border 1.5s ease-in-out infinite;
+    z-index: 900;
+}
+
+.emergency-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--red);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 1000px) {
+    .translator-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .translator-sidebar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .translator-sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .translator-page {
+        padding: 1rem;
+    }
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 1rem;
+    background: var(--glass);
+    border: 1px solid var(--border-dim);
+    border-radius: 12px;
+}
+
+.language-selector label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dim);
+    white-space: nowrap;
+}
+
+.language-selector select {
+    background: rgba(10, 13, 26, 0.4) !important;
+    border: 1px solid rgba(79, 142, 247, 0.2) !important;
+    color: var(--text) !important;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.language-selector select:focus {
+    border-color: var(--blue) !important;
+    box-shadow: 0 0 0 2px rgba(79, 142, 247, 0.2);
+}

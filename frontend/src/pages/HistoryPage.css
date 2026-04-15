@@ -1,0 +1,150 @@
+/* History Page */
+.history-page {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hist-stats {
+    margin-bottom: 1.5rem;
+}
+
+.stat-blue .stat-value {
+    color: var(--blue);
+}
+
+.stat-cyan .stat-value {
+    color: var(--cyan);
+}
+
+.stat-red .stat-value {
+    color: var(--red);
+}
+
+.stat-green .stat-value {
+    color: var(--green);
+}
+
+.hist-charts {
+    margin-bottom: 1.5rem;
+}
+
+.chart-card {
+    padding: 1.5rem;
+}
+
+.chart-card h3 {
+    margin-bottom: 1rem;
+}
+
+/* Top words */
+.top-words {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.top-word-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.88rem;
+}
+
+.top-rank {
+    color: var(--text-muted);
+    min-width: 24px;
+    font-weight: 700;
+}
+
+.top-word {
+    color: var(--text);
+    font-weight: 600;
+    min-width: 80px;
+}
+
+.top-bar-wrap {
+    flex: 1;
+    height: 6px;
+    background: var(--glass);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.top-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--blue), var(--cyan));
+    border-radius: 999px;
+    transition: width .6s ease;
+}
+
+.top-count {
+    color: var(--text-muted);
+    min-width: 24px;
+    text-align: right;
+}
+
+/* Table controls */
+.history-table-card {
+    padding: 1.5rem;
+}
+
+.table-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.2rem;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.filter-tab {
+    padding: 0.35rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.83rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid var(--border-dim);
+    background: var(--glass);
+    color: var(--text-muted);
+    transition: all .2s;
+}
+
+.filter-tab.active {
+    background: var(--blue-dim);
+    color: var(--blue);
+    border-color: rgba(79, 142, 247, .3);
+}
+
+.filter-tab:hover:not(.active) {
+    background: var(--glass-hover);
+    color: var(--text);
+}
+
+/* Confidence chip */
+.conf-chip {
+    display: inline-block;
+    padding: .15rem .6rem;
+    border-radius: 999px;
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.conf-chip.conf-high {
+    background: rgba(16, 185, 129, .12);
+    color: var(--green);
+}
+
+.conf-chip.conf-medium {
+    background: rgba(245, 158, 11, .12);
+    color: var(--yellow);
+}
+
+.conf-chip.conf-low {
+    background: rgba(239, 68, 68, .12);
+    color: var(--red);
+}

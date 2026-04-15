@@ -1,0 +1,43 @@
+# Dependency directories
+node_modules/
+backend/venv/
+backend/.venv/
+venv/
+.venv/
+env/
+.env/
+
+# Data and large files
+AI_trainer/
+archive.zip
+*.npy
+*.h5
+backend/ai_model/lstm_X.npy
+backend/ai_model/lstm_y.npy
+backend/ai_model/lstm_action_model.h5
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Backend specific
+__pycache__/
+*.py[cod]
+*$py.class
+db.sqlite3
+backend/db.sqlite3
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Frontend specific
+/frontend/dist/
+/frontend/build/
+.eslintcache
+*.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
